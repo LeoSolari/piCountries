@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: -webkit-linear-gradient(360deg,#030303 10%,#1f1f1f 360%); background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
+    color: #fff;
+}
+
+.container button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    border: 2px solid #3eff37;
+    background-color: rgb(55, 55, 103);
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.container button:hover{
+
+    transition: ease-in-out 1s;
+    background: linear-gradient(to left, #0d0d0d, rgb(55, 55, 103) 50%) right;
+    background-size: 200% 100%;
+}
+
+.container img{
+   margin: 50px;
+    width: 600px;
+    height: 450px;
+    
+    border: 1px solid #fff;
+}
+
+.container p{
+    font-size: 1.5em;
+}

@@ -1,0 +1,32 @@
+.container {
+    background: rgb(0,0,0);
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
+.items{
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
+
+.items a{
+    text-decoration: none;
+}
+
+
+.title {
+    font-size: 2em;
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+}
+

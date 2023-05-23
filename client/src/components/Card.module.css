@@ -1,0 +1,32 @@
+.container {
+    width: 340px;
+    padding: 1.2em 4em;
+    margin: 1em;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.img {
+    border-radius: 8px;
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1em;
+    color: wheat;
+
+}
+
+.continent {
+    font-size: 1em;
+    color: wheat;
+
+}

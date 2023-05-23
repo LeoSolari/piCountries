@@ -1,0 +1,156 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0f176c;
+    opacity: 0.98;
+    z-index: 300;
+    user-select: none;
+}
+
+.card {
+    background-color: #071429;
+    
+    border-radius: 1rem;
+    box-shadow: 0.75rem 0.75rem 0.75rem #40649d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 34.8rem;
+
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 20px 20px 0 0;
+    line-height: 0;
+    position: relative;
+    top: 30px;
+    left: 240px;
+
+}
+
+.close:hover {
+    color: rgb(2, 211, 248);
+    cursor: pointer;
+
+}
+
+.column {
+    display: flex;
+    align-items: center;
+
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.25rem;
+}
+
+.form {
+    box-sizing: border-box;
+    padding-left: 50px;
+    width: 520px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.title {
+    color: aliceblue;
+    font-size: 32px;
+}
+
+.label {
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.x {
+    padding-left: 10px;
+}
+
+.input {
+    background: #0a0f17;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    height: 22px;
+}
+
+.input:focus {
+    border: 1px solid aliceblue
+}
+
+.error {
+    background: #0a0f17;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    height: 22px;
+}
+
+
+.flagBox {
+    margin-right: 30px;
+    padding: 10px 20px;
+    height: 50px;
+    border-color: rgba(150, 148, 148, 0.2);
+}
+
+.span {
+    color: #dddddd;
+}
+
+.btnDelete {
+    font-size: 0.9rem;
+    color: #ff0000;
+    font-weight: bold;
+    background-color: #07152a00;
+    border: none;
+}
+
+.btnDelete:hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+.btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    left: 37%;
+}
+
+
+.front {
+    position: relative;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(49, 105, 109);
+    background: #dddddd;
+}

@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    background: rgb(9,9,62);
+    background: linear-gradient(180deg, rgba(9,9,62,1) 26%, rgba(11,11,111,1) 60%, rgba(16,16,152,1) 87%, rgba(48,16,255,1) 100%); 
+    padding:10em 15em;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selectContainer {
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
+.stylesSelect{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0.5em 0.5em;
+    
+}
+
+.select {
+    font-size: 15px;
+    padding: 0.27rem 0.27rem 0.27rem 0.54rem;
+    border-radius: 8px;
+    background-color: #0a0f17;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+.option {
+    background-color: #0a0f17;
+    color: aliceblue;
+    border-radius: 8px;
+    
+}
+
+.manageFilters{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    margin: 0 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: black;
+    color: wheat;
+    border: none;
+    border-radius: 16px;
+}
+
+.btn:hover{
+    background-color: rgb(200, 41, 169);
+    transition: 2s;
+    cursor: pointer;
+}
