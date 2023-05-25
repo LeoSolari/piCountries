@@ -7,8 +7,13 @@ import Style from "./Create.module.css";
 const Create = ({ setForm }) => {
   let countries = useSelector((state) => state.countries);
   let sorting = useSelector((state) => state.sorting);
+  //Declara las variables countries y sorting utilizando el hook useSelector de React Redux.
+  //Estas variables se utilizan para acceder al estado global de Redux y obtener los valores de state.countries y state.sorting.
 
   const dispatch = useDispatch();
+
+  // Declara el Dispatch
+
   const [error, setError] = useState({});
   const [create, setCreate] = useState({
     name: "",
@@ -17,6 +22,7 @@ const Create = ({ setForm }) => {
     season: "",
     country: [],
   });
+  //almacena un objeto con los valores del formulario.
 
   useEffect(() => {
     setError(validateCreate(create));
@@ -27,13 +33,13 @@ const Create = ({ setForm }) => {
     const errors = {};
     if (create.name.length < 3) errors.name = true;
 
-    if (create.difficulty === "") errors.difficulty = "error";
+    if (create.difficulty === "") errors.difficulty = "invalid";
 
-    if (create.duration === "") errors.duration = "error";
+    if (create.duration === "") errors.duration = "invalid";
 
-    if (create.season === "") errors.season = "error";
+    if (create.season === "") errors.season = "invalid";
 
-    if (!create.country[0]) errors.country = "error";
+    if (!create.country[0]) errors.country = "invalid";
 
     return errors;
   };
@@ -44,6 +50,8 @@ const Create = ({ setForm }) => {
       [event.target.name]: event.target.value,
     });
   };
+  // se utiliza como manejador de eventos para el cambio de entrada en el formulario.
+  // Actualiza el estado create con los nuevos valores ingresados en el campo correspondiente.
 
   const handleSelect = (event) => {
     if (event.target.value !== "countries") {
@@ -54,10 +62,14 @@ const Create = ({ setForm }) => {
     }
   };
 
+  //Define la función handleSelect que se utiliza como manejador de eventos para la selección de opciones en el formulario. Agrega la opción seleccionada al arreglo country en el estado create.
+
   const handleCreate = () => {
-    axios.post("/activities", create);
+    axios.post("http://localhost:3001/activities", create);
     setForm(false);
   };
+
+  //Define la función handleCreate que se utiliza como manejador de eventos para el envío del formulario. Realiza una solicitud POST a la ruta "http://localhost:3001/activities" con los datos del formulario almacenados en create. Luego, establece setForm en falso para ocultar el formulario.
 
   const handleDelete = (event) => {
     event.preventDefault();
@@ -69,7 +81,11 @@ const Create = ({ setForm }) => {
     });
   };
 
+  //Define la función handleDelete que se utiliza como manejador de eventos para eliminar una opción seleccionada del arreglo country en el estado create.
+
   let countriesSorted = countries.sort((a, b) => a.name.localeCompare(b.name));
+
+  //La variable countriesSorted se utiliza para almacenar el arreglo countries ordenado alfabéticamente según el nombre.
 
   return (
     <div className={Style.container}>
@@ -126,13 +142,12 @@ const Create = ({ setForm }) => {
             </div>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Season</label>
+                <label className={Style.label}>Estaciones</label>
                 <select
                   name="season"
                   onChange={handleInput}
                   className={Style.input}
                 >
-                  <option value="">Elegir estacion</option>
                   <option value="Summer">Verano</option>
                   <option value="Autumn">Otoño</option>
                   <option value="Winter">Invierno</option>
@@ -142,7 +157,7 @@ const Create = ({ setForm }) => {
             </div>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Countries</label>
+                <label className={Style.label}>Paises</label>
                 <select
                   name="country"
                   onChange={handleSelect}
@@ -180,7 +195,7 @@ const Create = ({ setForm }) => {
             >
               <span className={Style.shadow}></span>
               <span className={Style.edge}></span>
-              <span className={Style.front}>Create</span>
+              <span className={Style.front}>Crear</span>
             </button>
           </div>
         </form>

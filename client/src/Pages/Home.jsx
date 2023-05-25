@@ -52,7 +52,7 @@ const Home = () => {
           />
 
           <div className={Style.flexContainer}>
-            <div className={Style.flags}>
+            <div>
               {sorting
                 ?.slice(
                   (current - 1) * perPage,

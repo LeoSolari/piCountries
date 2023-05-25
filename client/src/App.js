@@ -1,11 +1,13 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Detail from "./Pages/Detail";
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/home" component={Home} />
+      <Route exact path="/" component={LandingPage} />
       <Route exact path="/detail/:id" component={Detail} />
     </BrowserRouter>
   );

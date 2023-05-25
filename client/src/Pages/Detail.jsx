@@ -33,7 +33,7 @@ const Detail = () => {
         <div className={Style.container}>
           <div>
             <h3>{country.id}</h3>
-            <Link to="/">
+            <Link to="/home">
               <button>Volver al inicio</button>
             </Link>
           </div>

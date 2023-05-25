@@ -28,8 +28,6 @@ router.post("/", async (req, res) => {
       where: { name: country },
     });
 
-    console.log(country);
-
     newActivity.addCountry(countryDb);
 
     res.send("Activity created successfully");

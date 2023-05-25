@@ -58,7 +58,9 @@ const getHome = async () => {
 //Finalmente, se mapea el resultado para estructurar los datos en un formato específico antes de devolverlos.
 
 const getByName = async (name) => {
-  let api = await axios.get(`https://restcountries.com/v3/countries/${name}`);
+  let api = await axios.get(
+    `https://rest-countries.up.railway.app/v3/name/${name}`
+  );
   api = api.data[0];
   api = {
     id: api.cca3,
@@ -79,7 +81,9 @@ const getByName = async (name) => {
 //Después de obtener los datos, se procesan para extraer las propiedades deseadas y devolver el objeto resultante.
 
 const getById = async (id) => {
-  let api = await axios.get(`https://restcountries.com/v3/alpha/${id}`);
+  let api = await axios.get(
+    `https://rest-countries.up.railway.app/v3/alpha/${id}`
+  );
   api = api.data[0];
   api = {
     id: api.cca3,
