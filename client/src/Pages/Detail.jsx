@@ -7,6 +7,9 @@ import Style from "./Detail.module.css";
 const Detail = () => {
   const [country, setCountry] = useState(null);
   let { id } = useParams();
+  //Se utiliza el hook useParams de React Router para obtener el parámetro id de la URL.
+  // Esto permite acceder al identificador único del país y utilizarlo en la solicitud a la API.
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,6 +21,7 @@ const Detail = () => {
         console.log(error);
       }
     };
+    //Se hace una solicitud GET a la url y una vez que se encuentra la respuesta, se guarda en el estado de country.
 
     fetchData();
   }, [id]);
@@ -26,6 +30,7 @@ const Detail = () => {
     style: "decimal",
     useGrouping: true,
   });
+  //se configura para usar el formato decimal y agrupación de dígitos.
 
   return (
     <div>

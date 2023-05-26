@@ -7,5 +7,6 @@ export const SEARCH = "SEARCH";
 export const CLOSE = "CLOSE";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const GET_SELECT_ACTIVITY = "GET_SELECT_ACTIVITY";
+export const DELETE_FILTERS = "DELETE_FILTERS";
 
 //Estas constantes se pueden importar en otros archivos de la aplicación y utilizar para definir las acciones y manipular el estado de Redux.

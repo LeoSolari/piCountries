@@ -9,4 +9,6 @@ const Spinner = () => {
   );
 };
 
+//Crea el spinner para cuando se carga un componente
+
 export default Spinner;

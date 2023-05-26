@@ -9,6 +9,7 @@ import {
   GET_SORT,
   POPULATION,
   SEARCH,
+  DELETE_FILTERS,
 } from "./action-types";
 
 // Crea una instancia de axios con la URL base configurada
@@ -87,7 +88,7 @@ export const getByName = (value) => async (dispatch) => {
 //se despacha una acción con el tipo SEARCH y los datos de respuesta como carga útil.
 
 export const deleteFilters = () => (dispatch) => {
-  return dispatch({ type: "DELETE_FILTERS" });
+  return dispatch({ type: DELETE_FILTERS });
 };
 //se utiliza para eliminar los filtros aplicados. Despacha una acción con el tipo "DELETE_FILTERS".
 

@@ -14,7 +14,6 @@ const initialState = {
   countries: [],
   sorting: [],
   error: false,
-
   activities: [],
 };
 //Este objeto representa el estado inicial de la aplicación.

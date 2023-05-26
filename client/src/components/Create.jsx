@@ -62,14 +62,16 @@ const Create = ({ setForm }) => {
     }
   };
 
-  //Define la función handleSelect que se utiliza como manejador de eventos para la selección de opciones en el formulario. Agrega la opción seleccionada al arreglo country en el estado create.
+  //Define la función handleSelect que se utiliza como manejador de eventos para la selección de opciones en el formulario.
+  //Agrega la opción seleccionada al arreglo country en el estado create.
 
   const handleCreate = () => {
     axios.post("http://localhost:3001/activities", create);
     setForm(false);
   };
 
-  //Define la función handleCreate que se utiliza como manejador de eventos para el envío del formulario. Realiza una solicitud POST a la ruta "http://localhost:3001/activities" con los datos del formulario almacenados en create. Luego, establece setForm en falso para ocultar el formulario.
+  //Define la función handleCreate que se utiliza como manejador de eventos para el envío del formulario.
+  // Realiza una solicitud POST a la ruta "http://localhost:3001/activities" con los datos del formulario almacenados en create. Luego, establece setForm en falso para ocultar el formulario.
 
   const handleDelete = (event) => {
     event.preventDefault();
@@ -97,12 +99,15 @@ const Create = ({ setForm }) => {
         </div>
         <form className={Style.form} onSubmit={handleCreate}>
           <div className={Style.input_container}>
-            <h2 className={Style.title}>Create Activity</h2>
+            <h2 className={Style.title}>Crear actividad</h2>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Nombre</label>
+                <label htmlFor="name" className={Style.label}>
+                  Nombre
+                </label>
                 <input
                   type="text"
+                  id="name"
                   name="name"
                   onChange={handleInput}
                   className={Style.input}
@@ -112,26 +117,32 @@ const Create = ({ setForm }) => {
             </div>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Dificultad</label>
+                <label htmlFor="difficulty" className={Style.label}>
+                  Dificultad
+                </label>
                 <select
+                  id="difficulty"
                   name="difficulty"
                   onChange={handleInput}
                   className={Style.input}
                 >
                   <option value="">Elegir dificultad</option>
-                  <option value="1">⭐ ☆ ☆ ☆ ☆</option>
-                  <option value="2">⭐⭐ ☆ ☆ ☆</option>
-                  <option value="3">⭐⭐⭐ ☆ ☆</option>
-                  <option value="4">⭐⭐⭐⭐ ☆</option>
-                  <option value="5">⭐⭐⭐⭐⭐</option>
+                  <option value="1">Muy facil</option>
+                  <option value="2">Facil</option>
+                  <option value="3">Regular</option>
+                  <option value="4">Dificil</option>
+                  <option value="5">Muy dificil</option>
                 </select>
               </div>
             </div>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Duracion</label>
+                <label htmlFor="duration" className={Style.label}>
+                  Duracion
+                </label>
                 <input
                   type="number"
+                  id="duration"
                   name="duration"
                   onChange={handleInput}
                   className={Style.input}
@@ -142,12 +153,16 @@ const Create = ({ setForm }) => {
             </div>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Estaciones</label>
+                <label htmlFor="season" className={Style.label}>
+                  Estaciones
+                </label>
                 <select
+                  id="season"
                   name="season"
                   onChange={handleInput}
                   className={Style.input}
                 >
+                  <option value="">Elegir estación</option>
                   <option value="Summer">Verano</option>
                   <option value="Autumn">Otoño</option>
                   <option value="Winter">Invierno</option>
@@ -157,8 +172,11 @@ const Create = ({ setForm }) => {
             </div>
             <div className={Style.column}>
               <div className={Style.div}>
-                <label className={Style.label}>Paises</label>
+                <label htmlFor="country" className={Style.label}>
+                  Paises
+                </label>
                 <select
+                  id="country"
                   name="country"
                   onChange={handleSelect}
                   className={Style.input}
@@ -203,4 +221,5 @@ const Create = ({ setForm }) => {
     </div>
   );
 };
+
 export default Create;

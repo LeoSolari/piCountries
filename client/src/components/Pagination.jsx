@@ -2,14 +2,20 @@ import React from "react";
 import Style from "./Pagination.module.css";
 
 const Pagination = ({ current, setCurrent, max, input, setInput }) => {
+  //es un componente funcional que recibe las siguientes propiedades: current (número de página actual),
+  // setCurrent (función para actualizar la página actual), max (número máximo de páginas),
+  //input (valor de entrada) e setInput (función para actualizar el valor de entrada).
   const next = () => {
     setCurrent(current + 1);
     setInput(input + 1);
   };
+  //aumenta el número de página actual
+
   const previous = () => {
     setCurrent(current - 1);
     setInput(input - 1);
   };
+  //disminuye el número de página actual
 
   return (
     <div className={Style.container}>

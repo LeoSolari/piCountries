@@ -8,23 +8,30 @@ import Filters from "../components/Filters";
 import Pagination from "../components/Pagination";
 import Errors from "../components/Errors";
 import Create from "../components/Create";
-
 import Style from "./Home.module.css";
 
 const Home = () => {
   const dispatch = useDispatch();
   const sorting = useSelector((state) => state.sorting);
+  //Se utiliza la función useSelector para acceder al estado sorting almacenado en la tienda.
+  //El estado sorting contiene la lista de países ordenados.
   const error = useSelector((state) => state.error);
+  //Se utiliza para acceder al estado error almacenado en la tienda.
+  const activities = useSelector((state) => state.activities);
+  // Se utiliza para acceder al estado activities almacenado en la tienda. El estado activities contiene la lista de actividades.
 
   const [form, setForm] = useState(false);
-  const activities = useSelector((state) => state.activities);
 
   const [sort, setSort] = useState(true);
-  // Pagination
+
   const [input, setInput] = useState(1);
+  //se utiliza para controlar la página actual en la paginación.
   const [current, setCurrent] = useState(1);
   const [perPage] = useState(5);
+  //define la cantidad de países que se mostrarán por página.
   const max = Math.ceil(sorting.length / perPage);
+  //Se calcula la cantidad máxima de páginas que se pueden mostrar,
+  //dividiendo la longitud de la lista de países sorting entre la cantidad de países por página y redondeando hacia arriba.
 
   useEffect(() => {
     if (!sorting[0]) {
@@ -35,6 +42,10 @@ const Home = () => {
       dispatch(getActivities());
     }
   }, [dispatch, sorting, activities]);
+
+  //Si la lista de países ordenados sorting está vacía, se envía una acción getCountries()
+  //utilizando la función dispatch.
+  //Si la lista de actividades activities no está vacía, se envía una acción getActivities()
 
   return (
     <div className={Style.container}>

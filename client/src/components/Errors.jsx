@@ -9,6 +9,7 @@ const Errors = () => {
   const handleClick = () => {
     dispatch(errorClose());
   };
+  //Se despacha la accion errorClose cuando se hace click en el boton
 
   return (
     <div className={Style.container}>

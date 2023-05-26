@@ -17,4 +17,6 @@ const Card = ({ id, flag, name, continent }) => {
   );
 };
 
+// Aqui se crear las cards que se van a mostrar en el home y se define un link para la ruta detail
+
 export default Card;
