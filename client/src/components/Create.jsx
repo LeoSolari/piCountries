@@ -35,7 +35,9 @@ const Create = ({ setForm }) => {
 
     if (create.difficulty === "") errors.difficulty = "invalid";
 
-    if (create.duration === "") errors.duration = "invalid";
+    if (create.duration === "" || create.duration <= 0) {
+      errors.duration = "invalid";
+    }
 
     if (create.season === "") errors.season = "invalid";
 
@@ -146,8 +148,6 @@ const Create = ({ setForm }) => {
                   name="duration"
                   onChange={handleInput}
                   className={Style.input}
-                  min="1"
-                  max="100"
                 />
               </div>
             </div>

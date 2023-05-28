@@ -25,6 +25,7 @@ export const getCountries = () => async (dispatch) => {
     console.log(error.message);
   }
 };
+
 //acción asíncrona que obtiene la lista de países.
 //Utiliza axiosInstance para realizar una solicitud GET a la ruta "/countries".
 //Si la solicitud se realiza correctamente, se despacha una acción con el tipo GET_COUNTRIES y los datos de respuesta se pasan como carga
